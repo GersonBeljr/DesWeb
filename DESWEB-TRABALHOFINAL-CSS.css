@@ -1,0 +1,62 @@
+body{
+    background-color: yellow;
+    border-bottom: 3px;
+    border-style: dotted;
+    border-color: black;
+
+}
+
+#corpo{
+    display: flex;                 /* Flexbox */
+    align-items: center;           /* Alinha verticalmente */
+    justify-content: center;       /* Alinha horizontalmente */
+    place-self: center;
+    margin: 15%;
+
+}
+
+header{
+    display: flex;                 /* Flexbox */
+    align-items: center;           /* Alinha verticalmente */
+    justify-content: center;       /* Alinha horizontalmente */
+
+    border-bottom: 3px;
+    border-bottom-style: dotted;
+    border-color: black;
+}
+
+#resp{
+    place-self: center;
+    height: 35px;
+    width:50%;
+}
+
+#comecar{
+    color: yellow;
+    background-color: black;
+    border-style: dotted;
+    border-color: white;
+    border: 3px;
+    width: 100px;
+    height: 70px;
+
+    border-radius: 12px;         /* Bordas arredondadas */
+    display: flex;               /* Flexbox para alinhamento */
+    align-items: center;         /* Centraliza verticalmente */
+    justify-content: center;     /* Centraliza horizontalmente */
+    
+    font-weight: bold;           /* Texto em negrito */
+    
+    
+    
+    padding: 10px 20px;          /* Espaço interno (opcional) */
+    border: none;                /* Remove a borda padrão (opcional) */
+    cursor: pointer;             /* Cursor de clique (opcional) */
+
+
+}
+
+#score, #time{
+     font-weight: bold; 
+     font-size: 1.5em;
+}
