@@ -6,6 +6,7 @@ function comecar(){
     pontos = 0;
     //console.log("deu");
     //RETIRA A MARGEM E O BOTÃO COMECAR
+        document.getElementById("butlogin").style.display='none';
         document.getElementById("comecar").style.display="none";
         document.getElementById("corpo").style.margin = "2%";
         let img = document.getElementById("img");
@@ -55,6 +56,7 @@ function comecar(){
                     document.getElementById("resp").removeAttribute("hidden");
                     document.getElementById("env").removeAttribute("hidden");
                     document.getElementById("score").removeAttribute("hidden");
+                    
                 //TEMPO SOME
                     document.getElementById("time").innerText="";
                 //BOTÃO COMEÇAR VOLTA
@@ -85,3 +87,16 @@ function responder(){
             }
         }
 }
+
+
+//PARTE DE LOGIN
+let butLogin = document.getElementById("butlogin");
+let telaLogin = document.getElementById("login");
+
+butLogin.addEventListener('click',function(event){
+    //console.log("cuceta")
+    document.getElementById("comecar").style.display='none';
+    butLogin.style.display='none';
+    telaLogin.style.display='flex';
+    telaLogin.setAttribute('class', 'w3-container w3-center w3-animate-left');
+})
