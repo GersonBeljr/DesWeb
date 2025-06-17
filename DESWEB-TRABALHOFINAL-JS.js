@@ -1,13 +1,14 @@
 //LISTA DE RESPOSTAS AINDA VAZIA PQ AINDA N DEFINIU QUAL IMAGEM VAI SER
   let list= [];
    let pontos;
-
+    let butComecar = document.getElementById("comecar");
+    let pontosTotal;
 function comecar(){
     pontos = 0;
     //console.log("deu");
     //RETIRA A MARGEM E O BOTÃO COMECAR
         document.getElementById("butlogin").style.display='none';
-        document.getElementById("comecar").style.display="none";
+        butComecar.style.display="none";
         document.getElementById("corpo").style.margin = "2%";
         let img = document.getElementById("img");
    
@@ -53,9 +54,9 @@ function comecar(){
                     img.src="";
                     img.style.height='';
                 //MOSTRA INPUT, ENVIAR E PONTUAÇÃO
-                    document.getElementById("resp").removeAttribute("hidden");
-                    document.getElementById("env").removeAttribute("hidden");
-                    document.getElementById("score").removeAttribute("hidden");
+                    document.getElementById("resp").style.display="flex";
+                    document.getElementById("env").style.display="flex";
+                    document.getElementById("score").style.display="flex";
                     
                 //TEMPO SOME
                     document.getElementById("time").innerText="";
@@ -83,20 +84,51 @@ function responder(){
             if(resp===list[i]){
                 list.splice(i,1);
                 pontos++;
+                pontosTotal++;
                 document.getElementById("score").innerHTML ="pontuação: "+ pontos;
             }
         }
-}
+} 
 
 
 //PARTE DE LOGIN
-let butLogin = document.getElementById("butlogin");
+let butLogin = document.getElementById("butlogin"); //BOTÃO LOGIN
 let telaLogin = document.getElementById("login");
 
+//APARECE A DIV DE LOGIN
 butLogin.addEventListener('click',function(event){
     //console.log("cuceta")
     document.getElementById("comecar").style.display='none';
     butLogin.style.display='none';
     telaLogin.style.display='flex';
     telaLogin.setAttribute('class', 'w3-container w3-center w3-animate-left');
+})
+
+
+let butlog = document.getElementById("butlog"); //BOTÃO ENVIAR
+
+butlog.addEventListener("click", function(){
+    //PEGA OS CAMPOS PREENCHIDOS E ANALISA
+    let nome = document.getElementById("nomelog").value;
+    let senha = document.getElementById("senhalog").value;
+    let rptsenha = document.getElementById("rptsenhalog").value;
+
+    let cardPlayer = document.getElementById("jogador");
+    if(nome!="" && senha!="" && rptsenha!=""){
+        if(senha===rptsenha){
+            //TIRA A DIV DE LOGIN E VOLTA O QUE TINHA
+            console.log("name:   "+ nome)
+            cardPlayer.innerText += "\n" + nome;
+            butLogin.style.display='flex';
+            telaLogin.style.display='none';
+            butComecar.style.display="flex";
+            return false;
+        } else{
+            alert("senhas imcompatíveis!")
+        }
+        
+    } else{
+        alert("campos não preenhcidos!")
+    }
+    
 })

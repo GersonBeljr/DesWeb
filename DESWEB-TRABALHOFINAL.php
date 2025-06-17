@@ -44,7 +44,7 @@
     #USA DB
         $sql = "use $dbTRABFINAL";
         if (mysqli_query($conn, $sql)) {
-            echo "Database selected successfully<br>";
+            #echo "Database selected successfully<br>";
         } else {
             echo "Error creating database: " . mysqli_error($conn) . "<br>";
         }
@@ -87,6 +87,7 @@ mysqli_close($conn);
     
     <div id="corpo">
 
+    <div id="jogador">PLAYER </div>
 
         <!--PARTE DE LOGIN------------------------------------------------------------------------>
 
@@ -94,16 +95,17 @@ mysqli_close($conn);
         <div id="colLogin">
             <button id="butlogin">LOGIN</button>
             <div id="login" > 
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return false">
                     <div ><input type="text" id="nomelog" placeholder="Nome" name="fname"></div>
                     <div ><input type="text" id="senhalog" placeholder="Senha" name="fsenha"></div>
                     <div ><input type="text" id="rptsenhalog" placeholder="Repetir Senha" name="frptsenha"></div>
-                    <div><input type="submit"></div> 
+                    <div><input id="butlog" type="submit"></div> 
                 </form>
             </div>
         </div>
         
         <?php
+            $logado= false;
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = $_POST['fname'];
                 $senha = $_POST['fsenha'];
@@ -112,7 +114,9 @@ mysqli_close($conn);
                     verifica_campo($name);
                     verifica_campo($senha);
                     verifica_campo($rptsenha);
-                    echo $name, $senha, $rptsenha; 
+
+                    $logado=true;
+                    #echo $name, $senha, $rptsenha; 
 
                     if($senha===$rptsenha){
                         #COLOCA USER NO BD
