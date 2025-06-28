@@ -1,0 +1,16 @@
+/*---------------------------------------------------*/
+/*  Imagem  */
+
+.imagem {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.imagem img {
+    width: 700px;
+    box-shadow: 1px 1px 10px #4FA3F7;
+    border-radius: 10px;
+}

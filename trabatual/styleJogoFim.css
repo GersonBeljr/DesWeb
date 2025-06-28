@@ -1,0 +1,31 @@
+/*---------------------------------------------------*/
+/*  Fim  */
+
+.fim {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'FontTitulo', sans-serif;
+}
+
+
+.fim button{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    background-color: #121A24;
+    border: 2px solid #4FA3F7;
+    border-radius: 20px;
+    color: #E0E6ED;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.iniciar button:active{
+    background-color: #4FA3F7;
+    border: 2px solid #121A24;
+}

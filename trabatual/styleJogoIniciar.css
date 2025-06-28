@@ -1,0 +1,68 @@
+/*---------------------------------------------------*/
+/*  iniciar  */
+.iniciar_regras {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+/*---------------------------------------------------*/
+/*  regras  */
+.regras {
+    max-width: 500px;
+}
+
+.regras p {
+    text-indent: 20px;
+    font-size: 1.4rem;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------*/
+/*  iniciar  */
+
+.iniciar {
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selecaoDificuldade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.selecaoDificuldade input {
+    width: 400px;
+}
+
+.selecaoDificuldade p {
+    width: 100%;
+    text-align: center;
+}
+
+.iniciar button{
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    background-color: #121A24;
+    border: 2px solid #4FA3F7;
+    border-radius: 20px;
+    color: #E0E6ED;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.iniciar button:active{
+    background-color: #4FA3F7;
+    border: 2px solid #121A24;
+}

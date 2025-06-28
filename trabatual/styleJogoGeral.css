@@ -1,0 +1,70 @@
+/*---------------------------------------------------*/
+/*  Parte jogo  */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    min-height: 800px;
+    color: #A1ACB8;
+}
+
+.jogo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*---------------------------------------------------*/
+/*  Leaderboard  */
+.leaderboard {
+    font-size: 1.5rem;
+    font-family: 'FontTitulo', sans-serif;
+    padding: 50px;
+}
+
+.leaderboard h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #1E2A38;
+    margin-bottom: 10px;
+}
+
+.leaderboard .cards {
+    overflow-y: scroll;
+    max-height: 700px;
+}
+
+.leaderboard .card {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.leaderboard .card .posição{
+    padding: 10px;
+    align-self: center;
+
+}
+
+.leaderboard .card .jogador{
+    display: flex;
+    flex-direction: column;
+}
+
+.leaderboard ::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Cor de fundo da barra de rolagem */
+.leaderboard ::-webkit-scrollbar-track {
+  background: #121A24;
+  border-radius: 20px;  
+}
+
+/* Cor do botão da barra de rolagem */
+.leaderboard ::-webkit-scrollbar-thumb {
+  
+  background: #1E2A38;
+  border-radius: 10px;  
+}
